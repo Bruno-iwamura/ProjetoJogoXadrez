@@ -1,5 +1,6 @@
 ﻿using ProjetoJogoXadrez.xadrez;
 using System;
+using System.Net.Http.Headers;
 using tabuleiro;
 using xadrez;
 
@@ -9,18 +10,13 @@ namespace ProjetoJogoXadrez
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro (8,8);
-
             //Posicao posInit = new Posicao(0,0);
             
             try
             {
-                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 0));
-                tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(1, 3));
-                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(3, 4));
-                tab.colocarPeca(new Rei(tab, Cor.Branca), new Posicao(0, 1));
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                Tela.imprimirTabuleiro(tab);
+                Tela.imprimirTabuleiro(partida.tab);
 
                 Console.ReadLine();
 
