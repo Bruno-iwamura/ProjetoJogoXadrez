@@ -1,6 +1,7 @@
 ﻿using ProjetoJogoXadrez.xadrez;
 using System;
 using tabuleiro;
+using xadrez;
 
 namespace ProjetoJogoXadrez
 {
@@ -11,6 +12,7 @@ namespace ProjetoJogoXadrez
             Tabuleiro tab = new Tabuleiro (8,8);
 
             //Posicao posInit = new Posicao(0,0);
+            /*
             try
             {
                 tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 0));
@@ -24,8 +26,13 @@ namespace ProjetoJogoXadrez
 
             } catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
-            }
+            }*/
 
+            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+
+            Console.WriteLine(pos);
+
+            Console.WriteLine(pos.toPosicao());
         }
     }
 }
